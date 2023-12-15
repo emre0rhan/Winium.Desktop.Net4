@@ -27,6 +27,11 @@
                 options = new CommandLineOptions();
             }
 
+            if (options.Port.HasValue)
+            {
+                listeningPort = options.Port.Value;
+            }
+
             if (options.LogPath != null)
             {
                 Logger.TargetFile(options.LogPath, options.Verbose);
